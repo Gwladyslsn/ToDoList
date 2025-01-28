@@ -10,5 +10,11 @@ Création d'une To-Do list
    - gestion suppression de tache ?
 
 4. OPTIONS :
+
    - vider toutes les taches en même temps ?
    - calculer le nombre de tache effectuer ?
+
+   // RESSOURCES :
+   https://ar-todolist.netlify.app/#htmlSection
+   chat GPT
+   cours

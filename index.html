@@ -9,12 +9,18 @@
   <body>
     <main>
       <section class="container">
+        <!-- titre et date -->
         <div class="title">
           <h1>Ma To-Do list</h1>
+          <div class="date" id="date">Date d'aujourd'hui</div>
         </div>
-        <div class="date">Date d'aujourd'hui</div>
-        <div class="list"></div>
-        <div class="controls">
+
+        <!-- listes des tâches -->
+        <div class="content">
+          <ul class="list"></ul>
+        </div>
+        <!-- ajout de tâche -->
+        <div class="add-item">
           <input
             type="text"
             id="taskInput"

@@ -8,43 +8,65 @@ main {
   justify-content: center;
 }
 
+section {
+  border: solid;
+}
+
 .container {
   width: 50%;
   height: 90vh;
-  background-color: lightgrey;
 }
 
 .title {
   display: flex;
+  flex-direction: column;
   font-size: 20px;
   color: black;
-  justify-content: center;
-  padding-bottom: 2rem;
-  background-color: grey;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 3rem;
 }
 
 .date {
   display: flex;
-  justify-content: center;
   width: 40%;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  background-color: grey;
-  border: solid;
 }
 
-.list {
+.content {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 60%;
-  background-color: lightslategray;
+  height: 80%;
+  background-color: whitesmoke;
+  opacity: 90%;
 }
 
-.controls {
+.list {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.item {
   display: flex;
-  justify-content: space-around;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  background-color: lightskyblue;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 10px;
+}
+
+.check {
+  width: 16px;
+  height: 16px;
+}
+
+.deleteBtn {
+  margin-left: auto; /* Pousse le bouton "Supprimer" à droite */
+}
+
+.add-item {
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  gap: 1rem;
 }

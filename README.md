@@ -4,7 +4,8 @@ Création d'une To-Do list
 2. traitment CSS
 3. javascript :
 
-   - gestion ajout de tache
+   - date automatique : ok
+   - gestion ajout de tache :
    - gestion tache effectuée
    - gestion suppression de tache ?
 

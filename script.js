@@ -1,9 +1,14 @@
 /// date ///
 const dateElement = document.getElementById("date");
-let options = { day: "numeric", month: "numeric", year: "numeric" };
-let today = new Date();
 
-dateElement.innerHTML = today.toLocaleDateString(options);
+function updateDate() {
+  let today = new Date();
+  let options = { day: "numeric", month: "long", year: "numeric" };
+  dateElement.innerHTML = today.toLocaleDateString("fr-FR", options);
+  console.log(today);
+}
+
+updateDate();
 
 /// add task ///
 // Sélectionne les éléments HTML nécessaires
@@ -73,3 +78,39 @@ resetTask.addEventListener("click", () => {
   const tasks = document.querySelectorAll(".item");
   tasks.forEach((task) => task.remove());
 });
+
+//count the number of tasks //
+const totalTasksElement = document.getElementById("totalTasks");
+const remainingTasksElement = document.getElementById("remainingTasks");
+
+function updateTaskCount() {
+  const tasks = document.querySelectorAll(".list .item");
+  const remainingTasks = document.querySelectorAll(
+    ".list .item input[type='checkbox']:not(:checked)"
+  );
+
+  totalTasksElement.textContent = tasks.length;
+  remainingTasksElement.textContent = remainingTasks.length;
+}
+
+addTaskBtn.addEventListener("click", () => {
+  setTimeout(updateTaskCount, 50);
+});
+
+list.addEventListener("change", () => {
+  updateTaskCount();
+});
+
+list.addEventListener("click", (event) => {
+  if (event.target.classList.contains("deleteBtn")) {
+    event.target.parentElement.remove();
+    updateTaskCount();
+  }
+});
+
+resetTask.addEventListener("click", () => {
+  list.innerHTML = "";
+  updateTaskCount();
+});
+
+updateTaskCount();

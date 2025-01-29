@@ -11,8 +11,9 @@ Création d'une To-Do list
 
 4. OPTIONS :
 
-   - vider toutes les taches en même temps ?
-   - calculer le nombre de tache effectuer ?
+   - vider toutes les taches en même temps ? ok
+   - calculer le nombre de tache à effectuer ?
+   - calculer le nombre de tache restantes ?
 
    // RESSOURCES :
 

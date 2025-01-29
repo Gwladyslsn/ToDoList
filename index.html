@@ -8,12 +8,16 @@
   </head>
   <body>
     <main>
+      <section class="count">
+        <p>Nombre de tache : <span id="totalTasks">0</span></p>
+        <p>Reste <span id="remainingTasks">0</span> tache(s) à faire</p>
+      </section>
       <section class="container">
         <!-- titre et date -->
         <div class="header">
           <h1>Ma To-Do list</h1>
           <div class="header-info">
-            <div class="date" id="date"></div>
+            <span class="date" id="date">date d'aujourd'hui</span>
             <div class="resetBtn">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

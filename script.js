@@ -58,3 +58,18 @@ list.addEventListener("click", function (event) {
     event.target.parentElement.remove(); // Supprime l'élément parent (li)
   }
 });
+
+// check task //
+list.addEventListener("click", function (event) {
+  if (event.target.classList.contains("check")) {
+    event.target.parentElement.classList.toggle("checked");
+  }
+});
+
+//reset//
+const resetTask = document.querySelector(".resetBtn");
+
+resetTask.addEventListener("click", () => {
+  const tasks = document.querySelectorAll(".item");
+  tasks.forEach((task) => task.remove());
+});

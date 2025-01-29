@@ -12,29 +12,24 @@ const addTaskBtn = document.getElementById("addTaskBtn");
 const list = document.querySelector(".list");
 
 // Écouteur d'événement sur le bouton "Ajouter"
-addTaskBtn.addEventListener("click", (addTask) => {
+addTaskBtn.addEventListener("click", () => {
   const taskText = newTaskInput.value.trim(); // Récupère la valeur du champ input
 
-  // Vérifie si le champ est vide
   if (taskText === "") {
     alert("Veuillez entrer une tâche !");
     return; // Arrête l'exécution si la tâche est vide
   }
 
-  // Crée un élément <li>
   const newTask = document.createElement("li");
   newTask.classList.add("item");
 
-  // Crée la checkbox
   const checkbox = document.createElement("input");
   checkbox.setAttribute("type", "checkbox");
   checkbox.classList.add("check");
 
-  // Crée le label avec le texte saisi
   const label = document.createElement("label");
   label.textContent = taskText; // Utilise la valeur de l'input
 
-  // Crée le bouton "Supprimer"
   const deleteBtn = document.createElement("button");
   deleteBtn.textContent = "Supprimer";
   deleteBtn.classList.add("deleteBtn");
@@ -49,4 +44,17 @@ addTaskBtn.addEventListener("click", (addTask) => {
 
   // Vide le champ input après l'ajout
   newTaskInput.value = "";
+});
+
+document.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    addTaskBtn.click();
+  }
+});
+
+// delete task //
+list.addEventListener("click", function (event) {
+  if (event.target.classList.contains("deleteBtn")) {
+    event.target.parentElement.remove(); // Supprime l'élément parent (li)
+  }
 });

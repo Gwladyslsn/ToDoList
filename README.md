@@ -15,6 +15,7 @@ Création d'une To-Do list
    - calculer le nombre de tache effectuer ?
 
    // RESSOURCES :
-   https://ar-todolist.netlify.app/#htmlSection
-   chat GPT
-   cours
+
+   - https://ar-todolist.netlify.app/#htmlSection
+   - chat GPT
+   - cours
